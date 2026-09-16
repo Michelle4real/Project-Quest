@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Records</title>
+    <link rel="stylesheet" href="visual.css">
+</head>
+
+<body>
+    <main class="visual-records">
+        <header class="records-header">
+            <div>
+                <p class="project-label">PROJECT ODYSSEUS</p>
+                <h1>VISUAL RECORDS</h1>
+                <p class="subtitle">Photographic evidence recovered from the journey.</p>
+            </div>
+            <div class="record-status">
+                <span class="status-dot"></span>
+                FILES RECOVERED
+            </div>
+        </header>
+        <div class="divider"></div>
+        <section class="records-intro">
+            <p class="section-label">MEDIA DATABASE</p>
+            <p>A collection of moments, faces, places and questionable evidence gathered throughout the journey.</p><br>
+            <p>This is all just fancy words for me to tell you that i stored every single image and video of yourself that i had to beg you to send to me😒. Like as how na.</p><br>
+            <p>Anywaysssss enjoy😘</p>
+        </section>
+
+        <section class="media-section">
+            <div class="section-heading">
+                <div>
+                    <p class="section-label">01 // PHOTOGRAPHIC RECORDS</p>
+                    <h2>IMAGES</h2>
+                </div>
+                <span>20 FILES</span>
+            </div>
+
+            <div class="media-grid" id="photoGrid"></div>
+        </section>
+
+        <section class="media-section">
+            <div class="section-heading">
+                <div>
+                    <p class="section-label">02 // VIDEO RECORDS</p>
+                    <h2>VIDEOS</h2>
+                </div>
+                <span>07 FILES</span>
+            </div>
+
+            <div class="media-grid" id="videoGrid"></div>
+        </section>
+
+        <footer class="records-footer">
+            <button id="backBtn">← BACK TO INVENTORY</button>
+            <button id="continueBtn">FINAL TRANSMISSION →</button>
+        </footer>
+    </main>
+
+    <div class="media-viewer" id="mediaViewer">
+        <button class="close-viewer" id="closeViewer">×</button>
+        <div class="viewer-content" id="viewerContent"></div>
+    </div>
+
+    <script src="visual.js"></script>
+</body>
+</html>

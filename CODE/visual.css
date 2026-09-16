@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #04111f;
+    color: #cfd9e6;
+    font-family: Georgia, serif;
+}
+
+.visual-records {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.records-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.project-label,
+.section-label,
+.record-status,
+.section-heading>span {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    opacity: 0.45;
+}
+
+.project-label {
+    margin-bottom: 10px;
+}
+
+.records-header h1 {
+    color: #caa323;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    margin-top: 12px;
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+.record-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #caa323;
+}
+
+.divider {
+    width: 100%;
+    height: 0.5px;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.records-intro {
+    max-width: 700px;
+    margin: 50px 0 65px;
+}
+
+.records-intro .section-label {
+    margin-bottom: 18px;
+}
+
+.records-intro p:last-child {
+    line-height: 1.8;
+    opacity: 0.65;
+}
+
+.media-section {
+    margin-bottom: 70px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    margin-top: 8px;
+    color: #caa323;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.media-card {
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.media-card:hover {
+    transform: translateY(-4px);
+    border-color: #caa323;
+}
+
+.media-card img,
+.media-card video {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    background: #020b14;
+}
+
+.media-info {
+    padding: 14px;
+}
+
+.media-info span {
+    font-size: 0.55rem;
+    letter-spacing: 1.5px;
+    opacity: 0.4;
+}
+
+.media-info h3 {
+    margin-top: 7px;
+    color: #caa323;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.records-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.records-footer button {
+    padding: 13px 22px;
+    background: transparent;
+    color: #cfd9e6;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    letter-spacing: 1.3px;
+    transition: color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.records-footer button:hover {
+    color: #caa323;
+    border-color: #caa323;
+    transform: translateY(-2px);
+}
+.media-viewer {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: rgba(2, 8, 15, 0.96);
+    z-index: 1000;
+}
+
+.media-viewer.active {
+    display: flex;
+}
+
+.viewer-content {
+    max-width: 90vw;
+    max-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.viewer-content img,
+.viewer-content video {
+    display: block;
+    max-width: 90vw;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+}
+
+.close-viewer {
+    position: fixed;
+    top: 25px;
+    right: 30px;
+    z-index: 1001;
+    background: none;
+    border: none;
+    color: #cfd9e6;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .media-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .visual-records {
+        width: 88%;
+        padding: 45px 0;
+    }
+
+    .records-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .records-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .media-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .records-footer {
+        flex-direction: column;
+    }
+
+    .records-footer button {
+        width: 100%;
+    }
+}
+
+.viewer-image {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: 90vw !important;
+    max-height: 85vh !important;
+    object-fit: contain !important;
+}

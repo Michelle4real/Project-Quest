@@ -1,0 +1,459 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #04111f;
+    color: #cfd9e6;
+    font-family: Georgia, serif;
+}
+
+.inventory {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.inventory-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.project-label,
+.section-label,
+.status {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    opacity: 0.45;
+}
+
+.project-label {
+    margin-bottom: 10px;
+}
+
+.inventory-header h1 {
+    color: #caa323;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #8bb59a;
+    box-shadow: 0 0 8px rgba(139, 181, 154, 0.5);
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
+    margin-bottom: 55px;
+}
+
+.section-label {
+    margin-bottom: 25px;
+    color: #caa323;
+    font-size: 0.7rem;
+    letter-spacing: 2.5px;
+    opacity: 0.7;
+}
+
+.id-section,
+.inventory-section {
+    margin-bottom: 65px;
+}
+
+.fake-id {
+    position: relative;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 25px;
+    background: linear-gradient(135deg, rgba(232, 225, 210, 0.08), rgba(10, 20, 35, 0.95));
+    border: 1px solid rgba(232, 225, 210, 0.25);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.fake-id::after {
+    content: "ODYSSEUS";
+    position: absolute;
+    right: -25px;
+    bottom: 35px;
+    color: rgba(232, 225, 210, 0.025);
+    font-size: 6rem;
+    font-weight: bold;
+    letter-spacing: 8px;
+    transform: rotate(-15deg);
+    pointer-events: none;
+}
+
+.id-top,
+.id-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: #e8e1d2;
+    font-size: 0.55rem;
+    letter-spacing: 1.8px;
+    opacity: 0.5;
+}
+
+.id-top {
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(232, 225, 210, 0.12);
+}
+
+.id-main {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.id-photo {
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed rgba(232, 225, 210, 0.25);
+    background: rgba(4, 17, 31, 0.7);
+    color: #e8e1d2;
+}
+
+.photo-mark {
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+    opacity: 0.5;
+}
+
+.id-photo span {
+    font-size: 0.5rem;
+    letter-spacing: 2px;
+    opacity: 0.3;
+}
+
+.id-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.id-name span,
+.id-grid span,
+.id-signature span {
+    display: block;
+    margin-bottom: 8px;
+    color: #cfd9e6;
+    font-size: 0.5rem;
+    letter-spacing: 1.8px;
+    opacity: 0.4;
+}
+
+.id-name strong {
+    color: #caa323;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    font-weight: normal;
+}
+
+.id-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.id-grid strong {
+    color: #cfd9e6;
+    font-size: 0.75rem;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.id-grid .active-text {
+    color: #8bb59a;
+}
+
+.id-signature {
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.id-signature strong {
+    color: #e8e1d2;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.id-bottom {
+    padding-top: 18px;
+    border-top: 1px solid rgba(232, 225, 210, 0.12);
+}
+
+.nickname-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.nickname {
+    padding: 12px 18px;
+    border: 1px solid;
+    font-size: 0.6rem;
+    letter-spacing: 1.5px;
+    transition: transform 0.3s ease;
+}
+
+.nickname:hover {
+    transform: translateY(-3px);
+}
+
+.nickname.gold {
+    color: #caa323;
+    border-color: rgba(202, 163, 35, 0.35);
+}
+
+.nickname.blue {
+    color: #6d9fc4;
+    border-color: rgba(109, 159, 196, 0.35);
+}
+
+.nickname.green {
+    color: #8bb59a;
+    border-color: rgba(139, 181, 154, 0.35);
+}
+
+.nickname.milk {
+    color: #e8e1d2;
+    border-color: rgba(232, 225, 210, 0.3);
+}
+
+.nickname.mystery {
+    color: #cfd9e6;
+    border-color: rgba(207, 217, 230, 0.2);
+    opacity: 0.5;
+}
+
+.trait-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.trait-card {
+    min-height: 180px;
+    padding: 25px;
+    background: rgba(10, 20, 35, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-left: 2px solid;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.trait-card:hover {
+    transform: translateY(-5px);
+    background: rgba(15, 28, 45, 0.95);
+}
+
+.trait-card>span {
+    font-size: 0.6rem;
+    letter-spacing: 1.5px;
+    opacity: 0.45;
+}
+
+.trait-card h2 {
+    margin: 35px 0 10px;
+    font-size: 1.15rem;
+    letter-spacing: 1.5px;
+}
+
+.trait-card p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    opacity: 0.55;
+}
+
+.trait-gold {
+    border-left-color: #caa323;
+}
+
+.trait-gold h2 {
+    color: #caa323;
+}
+
+.trait-blue {
+    border-left-color: #6d9fc4;
+}
+
+.trait-blue h2 {
+    color: #6d9fc4;
+}
+
+.trait-green {
+    border-left-color: #8bb59a;
+}
+
+.trait-green h2 {
+    color: #8bb59a;
+}
+
+.trait-milk {
+    border-left-color: #e8e1d2;
+}
+
+.trait-milk h2 {
+    color: #e8e1d2;
+}
+
+.equipped {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 25px;
+    background: rgba(10, 20, 35, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.equipped span {
+    padding: 10px 15px;
+    color: #8bb59a;
+    border: 1px solid rgba(139, 181, 154, 0.3);
+    font-size: 0.6rem;
+    letter-spacing: 1.5px;
+}
+
+.observation-box {
+    position: relative;
+    max-width: 800px;
+    padding: 30px;
+    background: rgba(232, 225, 210, 0.035);
+    border: 1px solid rgba(232, 225, 210, 0.14);
+    border-left: 2px solid #e8e1d2;
+}
+
+.observation-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(232, 225, 210, 0.1);
+}
+
+.observation-header span {
+    color: #e8e1d2;
+    font-size: 0.55rem;
+    letter-spacing: 1.5px;
+    opacity: 0.5;
+}
+
+.observation-box p {
+    max-width: 700px;
+    margin-bottom: 20px;
+    color: #e8e1d2;
+    line-height: 1.8;
+    opacity: 0.65;
+}
+
+.observation-stamp {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 7px 12px;
+    border: 1px solid rgba(139, 181, 154, 0.35);
+    color: #8bb59a;
+    font-size: 0.55rem;
+    letter-spacing: 2px;
+    transform: rotate(-2deg);
+}
+
+.inventory-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.inventory-footer button {
+    padding: 13px 25px;
+    background: transparent;
+    color: #cfd9e6;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+#visualRecordsBtn:hover {
+    color: #6d9fc4;
+    border-color: #6d9fc4;
+    transform: translateX(4px);
+}
+
+#backToArchiveBtn:hover {
+    color: #caa323;
+    border-color: #caa323;
+    transform: translateX(-4px);
+}
+
+@media (max-width: 700px) {
+    .inventory {
+        width: 88%;
+        padding: 45px 0;
+    }
+
+    .inventory-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .inventory-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .id-main {
+        grid-template-columns: 1fr;
+    }
+
+    .id-photo {
+        height: 250px;
+    }
+
+    .id-grid,
+    .trait-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .id-top,
+    .id-bottom,
+    .observation-header {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .inventory-footer {
+        flex-direction: column;
+    }
+
+    .inventory-footer button {
+        width: 100%;
+    }
+}
